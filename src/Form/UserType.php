@@ -14,7 +14,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -29,7 +29,7 @@ class UserType extends AbstractType
                 'required'=>'required',
                 'attr'=>[
                     'class'=>'form-username form-control',
-                    'placeholder'=>'Username'
+                    'placeholder'=>'Usuario'
                 ]
             ])
             ->add('email', EmailType::class,[
@@ -45,18 +45,18 @@ class UserType extends AbstractType
                 'first_options'=>[
                     'attr'=>[
                         'class'=>'form-password form-control',
-                        'placeholder'=>'password'
+                        'placeholder'=>'contraseña'
                     ]
                 ],
                 'second_options'=>[
                     'attr'=>[
                         'class'=>'form-password form-control',
-                        'placeholder'=>'repeat password'
+                        'placeholder'=>'repetir contraseña'
                     ]
                 ]
                 ])
 
-            ->add('dateofbirth', DateTimeType::class, [
+            ->add('dateofbirth', DateType::class, [
                 'label' => 'Published at',
                 'widget'=>'single_text',
                 'attr'=>[
@@ -78,14 +78,14 @@ class UserType extends AbstractType
                 'required'=>'required',
                 'attr'=>[
                     'class'=>'form-username form-control',
-                    'placeholder'=>'Username'
+                    'placeholder'=>'Usuario'
                 ]
             ])
             ->add('email', EmailType::class,[
                 'required'=>'required',
                 'attr'=>[
                     'class'=>'form-email form-control',
-                    'placeholder'=>'Email@email'
+                    'placeholder'=>'Email'
                 ]
             ])
             ->add('plainpassword', RepeatedType::class,[
@@ -100,7 +100,7 @@ class UserType extends AbstractType
                 'second_options'=>[
                     'attr'=>[
                         'class'=>'form-password form-control',
-                        'placeholder'=>'repeat password'
+                        'placeholder'=>'repetir contraseña'
                     ]
                 ]
             ])

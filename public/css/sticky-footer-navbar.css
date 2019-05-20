@@ -651,3 +651,14 @@ fieldset.radioEmpty input:focus{
 #video{
     display: none;
 }
+
+#entrar {
+    width:30%;
+    color: #ffF;
+    background: #CC3B3B;
+    font-style: normal;
+}
+
+#registro {
+    background-color: olive;
+}
