@@ -25,42 +25,46 @@ class UserType extends AbstractType
     {
         $builder
             ->add('username', \Symfony\Component\Form\Extension\Core\Type\TextType::class,[
-
+                'label' => 'Usuario',
                 'required'=>'required',
                 'attr'=>[
-                    'class'=>'form-username form-control',
+                    'class'=>'reg-form',
                     'placeholder'=>'Usuario'
                 ]
             ])
             ->add('email', EmailType::class,[
+                'label' => 'Email',
                 'required'=>'required',
                 'attr'=>[
-                    'class'=>'form-email form-control',
+                    'class'=>'reg-form2',
                     'placeholder'=>'Email@email'
                 ]
             ])
             ->add('plainpassword', RepeatedType::class,[
+
                 'type'=>PasswordType::class,
                 'required'=>'required',
+                'label' => 'Contraseña',
                 'first_options'=>[
                     'attr'=>[
-                        'class'=>'form-password form-control',
+                        'class'=>'reg-form3',
                         'placeholder'=>'contraseña'
                     ]
                 ],
                 'second_options'=>[
                     'attr'=>[
-                        'class'=>'form-password form-control',
+                        'class'=>'reg-form5',
                         'placeholder'=>'repetir contraseña'
+
                     ]
                 ]
                 ])
 
             ->add('dateofbirth', DateType::class, [
-                'label' => 'Published at',
+                'label' => 'Nacimiento',
                 'widget'=>'single_text',
                 'attr'=>[
-                    'class'=>'form-control js-datepicker'
+                    'class'=>'reg-form4'
                 ]
             ])
 
