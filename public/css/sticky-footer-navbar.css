@@ -69,6 +69,7 @@ body {
 #subtitulo{
     font-size:50px;
     color:#CC3B3B;
+    text-align: center;
 }
 #texto {
     color:#FFF;
@@ -687,4 +688,8 @@ fieldset.radioEmpty input:focus{
 #reg-button {
     text-decoration: none;
     color: black;
+}
+
+#almilialeregalaronelcredito{
+    margin-left: 200px;
 }
